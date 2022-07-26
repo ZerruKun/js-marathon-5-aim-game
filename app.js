@@ -69,6 +69,17 @@ const getRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
+const winTheGame = () => {
+  const kill = () => {
+    const circle = document.querySelector(".circle")
+    if(circle) {
+      circle.click()
+    }
+  }
+
+  setInterval(kill, 30)
+}
+
 startBtn.addEventListener("click", (event) => {
   event.preventDefault();
   screens[0].classList.add("up");
